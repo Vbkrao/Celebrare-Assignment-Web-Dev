@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dynamic Text Editor</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div id="toolbar">
+        <div id="undo-redo-container">
+            <button onclick="undo()">Undo</button>
+            <button onclick="redo()">Redo</button>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="content">
+            <div id="final-text-container">
+                <div id="final-text"></div>
+            </div>
+        </div>
+
+        <div id="editor-options">
+            <div id="text-options">
+                <label for="font-select">Font:</label>
+                <select id="font-select" onchange="changeFont(this.value)">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Georgia">Georgia</option>
+                </select>
+
+                <label for="size-select">Size:</label>
+                <select id="size-select" onchange="changeSize(this.value)">
+                    <option value="12px">12px</option>
+                    <option value="16px">16px</option>
+                    <option value="20px">20px</option>
+                    <option value="24px">24px</option>
+                    <option value="28px">28px</option>
+                    <option value="32px">32px</option>
+                </select>
+
+                <label for="color-select">Color:</label>
+                <input type="color" id="color-select" onchange="changeColor(this.value)">
+            </div>
+
+            <div id="add-text">
+                <input type="text" id="text-field" placeholder="Enter text">
+                <button onclick="addText()">Add Text</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
